@@ -19,6 +19,7 @@ from . import views
 from . import adress_from_zip as zip
 from . import prefectures_api as pref
 from . import municipalities_api as city
+from . import predict_image_from_base64 as pred
 
 urlpatterns = [
     path(
@@ -40,4 +41,8 @@ urlpatterns = [
         'api/v1/addresses/zip',
         views.get_address_from_zip,
         name='fnc-v'),
+    path(
+        'api/v1/image/classification',
+        pred.PredictImageFromBase64.as_view(),
+        name='pred-v'),
 ]

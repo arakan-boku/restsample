@@ -1,5 +1,6 @@
-from td20 import tf_hub_mobilenet_v2 as mn
+# from td20 import tf_hub_mobilenet_v2 as mn
 import base64
+# import json
 
 
 def base64encode(file_name):
@@ -10,7 +11,12 @@ def base64encode(file_name):
     return encoded_base64_text
 
 
-cl = mn.MobileNetImageNet()
-ans = cl.predict_from_base64(base64encode('test.jpg'))
-print(ans)
+# cl = mn.MobileNetImageNet()
+# out_dict = {
+#    'message': '',
+#    'result': ''
+# }
+# out_dict['result'] = cl.predict_from_base64(base64encode('test.jpg'))
+# resp = json.dumps(out_dict, indent=2)
+print(base64encode('test.jpg'))
 # print(base64encode('test.jpg'))
